@@ -1,0 +1,18 @@
+table td:hover {
+    background-color: rgba(0,0,0,.075);
+}
+
+table td:focus {
+    outline-style: solid;
+    outline-width: medium;
+    outline-color: black;
+    outline-offset: -1px;
+}
+
+.popover-cell {
+    background-color: LightPink;
+}
+
+h1 {
+    text-align: center;
+}

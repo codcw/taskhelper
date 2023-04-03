@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% set active_page = "index" %}
+
+{% block content %}
+<h1>home</h1>
+<div class="container-fluid text-center">
+{% for task in tasks %}
+  <div class="row g-2">
+    <div class="col">
+      <div class="p-3 border bg-light"> {{ task.name }} </div>
+    </div>
+    <div class="col">
+      <div class="p-3 border bg-light"> {{ task.start }} </div>
+    </div>
+    <div class="col">
+      <div class="p-3 border bg-light"> {{ task.end }} </div>
+    </div>
+    <div class="col border bg-light">
+      <form action="#" method="post" align="center">
+        <button type="submit" class="btn btn-success btn-sm" name="id" value="{{ task.id }}">Done</button>
+      </form>
+      </div>
+    </div>
+{% endfor %}
+</div>
+
+{% endblock %}
